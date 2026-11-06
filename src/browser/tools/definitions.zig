@@ -255,7 +255,7 @@ pub fn of(tool: Tool) Definition {
             ),
         },
         .tree => .{
-            .description = "Semantic outline of the page as indented text: one node per line with its role, accessible name, value and backendNodeId, plus checked state and select options with the selected one marked. The default first read of an unfamiliar page; input and select values are already here, so no `nodeDetails` call is needed to read them. Pass `backendNodeId` to scope to a subtree and `maxDepth` to survey structure before going deeper. Read it again after any page-changing action, since the DOM it describes may have changed; pass `delta` then to get only what changed since the last `tree` call. Use `nodeDetails` to turn a backendNodeId into a CSS selector for actions.",
+            .description = "Semantic outline of the page as indented text: one node per line with its role, accessible name, value and backendNodeId, plus checked state and select options with the selected one marked. The default first read of an unfamiliar page; input and select values are already here, so no `nodeDetails` call is needed to read them. Pass `backendNodeId` to scope to a subtree and `maxDepth` to survey structure before going deeper. Read it again after any page-changing action, since the DOM it describes may have changed; use `nodeDetails` to turn a backendNodeId into a CSS selector for actions.",
             .summary = "Semantic DOM tree of the page",
             .input_schema = minify(
                 \\{
